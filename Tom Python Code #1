@@ -1,0 +1,39 @@
+def input_code():
+  number = input('To start the test please enter the following code: 0345')
+  
+  if number == '0345':
+    print('Thank you!')
+  else:
+    print('Please enter the correct code!!')
+    input_code()
+
+def choose_number1():
+  number = int(input('Please enter a number between 1 and 4'))
+
+  if number < 1 and number > 4:
+    print('Please enter a valid number.')
+  else:
+    return number
+     
+def choose_number2():
+  number = int(input('Please enter another number, this time between 4 and 8'))
+  if number <4 and number > 8:
+    print('Please enter a valid number')
+  else:
+    return number
+    
+def main():
+  print('Welcome to my program')
+  name = input('What is your name?')
+  print('Hi, %s.' % name)
+  
+  input_code()
+  number1 = choose_number1()
+  number2 = choose_number2()
+  
+  input('Good, now plus them together, add the number 12 and press enter')
+  print('Your first number was: %s' % str(number1))
+  print('Your second number was: %s' % str(number2))
+  print('Your overall outcome (Which was +12) was: %s' % str(number1 + number2 + 12))
+    
+main()
